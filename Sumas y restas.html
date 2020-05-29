@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Juego Sumas</title>
+		<meta charset="utf-8" />
+		<style>
+			*{font-family: arial}
+			body{
+				background: #FFE4C4;
+			}
+			#contenedor{
+				width: 800;				
+				margin: 10 auto;
+				padding: 1;
+				text-align: center;
+			}	
+
+			#contOperacion{
+				margin-top: 5;
+			}
+			#contOperacion div{
+				float: center;
+			}
+			#propuestaResultado{
+				outline: 0;
+				border: solid 1 #FFFFFF;
+				text-align: center;
+				font-size: 150;
+				border-radius: 11;
+				width: 222;
+			}
+			#operacion{
+				font-size: 150;
+				width: 60;
+			}
+			#propResultado{
+				width: 40;
+			}			
+			#mensaje{
+				font-size: 150;
+				width: 100;
+				height: 200;
+			}
+			#contRadios {
+				width: 100;
+				font-size: 44;								
+				padding: 5;
+			}
+			.boton{
+				color: #FFFFFF;
+				border: solid 1 #FFFFFF;
+				border-radius: 40;
+				background: #5F9EA0;
+				
+			}
+			#botonResultado, #botonSiguiente{
+				outline: 0;
+				font-size: 77;				
+				text-align: center;
+				padding:15;
+				margin-top: 5;	
+				box-shadow: 0 3 15 0 rgb(0, 105, 202);
+				transition: all 0.10 ease-in-out;
+				position:relative;
+				cursor: pointer;								
+			}
+			#botonResultado:active, #botonSiguiente:active{
+				top:5;
+				box-shadow: 0 1 0 0 rgb(0, 105, 202)
+			}
+		</style>
+		<script src="código.js"></script>
+	</head>
+	<body>
+			<div id="contenedor">
+				<div id="contRadios" class="boton">
+					<label ><input type="radio" name="tipoOperacion" id="suma" checked="checked"/> Suma </label>
+					<label><input type="radio" name="tipoOperacion" id="resta"/> Resta </label>
+				</div>
+				<div id="contOperacion">
+					<div id="operacion"></div>
+					<div id="propResultado"><input type="text" id="propuestaResultado"/></div>
+				</div>
+				<div id="contBotones" >
+					<button class="boton" id="botonResultado" > Comprobar </button>
+					<button id="botonSiguiente" class="boton" > Siguiente </button>
+				</div>
+				<div id="mensaje"></div>			
+			</div>	
+	</body>
+</html>
